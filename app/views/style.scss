@@ -48,11 +48,13 @@ table {
 }
 
 body {
+  background: url('/stellar.jpg') center top no-repeat;
   background-color: #000000;
+  color: #fff;
   font-family: Menlo, Monaco, monospace;
 }
 
 #wrapper {
-  margin: 0 auto;
+  margin: 4em auto;
   width: 40em;
 }
