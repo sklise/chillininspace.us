@@ -48,13 +48,20 @@ table {
 }
 
 body {
-  background: url('/stellar.jpg') center top no-repeat;
-  background-color: #000000;
+  background: url('/stellar.jpg') no-repeat top center;
+  background-color: #000;
   color: #fff;
   font-family: Menlo, Monaco, monospace;
 }
 
 #wrapper {
-  margin: 4em auto;
+  background: url('http://chillininspace.us.s3.amazonaws.com/stellar_standin.png') center center no-repeat;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
   width: 40em;
+  
+  div {
+    padding: 200px 0 0;
+  }
 }
