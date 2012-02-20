@@ -8,6 +8,10 @@ get '/css/style.css' do
   scss :style
 end
 
+get '/:page' do
+  erb params[:page].to_sym
+end
+
 # 404 Error
 not_found do
   erb :notfound
