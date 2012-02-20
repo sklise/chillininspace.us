@@ -55,7 +55,7 @@ body {
 }
 
 #wrapper {
-  background: url('http://chillininspace.us.s3.amazonaws.com/stellar_standin.png') center center no-repeat;
+  background: url('/stellar_standin.png') center center no-repeat;
   margin: 0px auto;
   position: relative;
   text-align: center;
@@ -65,3 +65,4 @@ body {
     padding: 200px 0 0;
   }
 }
+a{color: #00FF15;}
