@@ -3,9 +3,20 @@
 <head>
   <title>Chillin' In Space</title>
   <script src="/js/jquery.1.7.1.js"></script>
-  <script src="/js/underscore.1.2.2.js"></script>
-  <link rel="stylesheet" href="/css/silkscreen/stylesheet.css"></link>
+  <script src="/js/ui.js"></script>
+  <script>
+  $(function() {
+    $('#downloads').click(function() {
+      new ui.dialog('Download ⬇', $('<ul><li><a href="http://chillininspace.us.s3.amazonaws.com/ChillininSpace3.0.zip">Mac</a></li><li><a href="http://chillininspace.us.s3.amazonaws.com/Chillin3.0Windows.zip">Windows</a></li></ul>'))
+              .closable()
+              .modal()
+              .show();
+      return false;
+    });
+  });
+  </script>
   <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/ui.css"/>
 </head>
 <body>
   <div id="wrapper">
@@ -14,5 +25,6 @@
       <%= yield %>    
     </div>
   </div>
+  <div style="top:-300%;left:-300%;position:absolute;"><img src="http://chillininspace.us.s3.amazonaws.com/overlay.png"></div>
 </body>
 </html>
