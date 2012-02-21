@@ -4,8 +4,10 @@
   <title>Chillin' In Space</title>
   <script src="/js/jquery.1.7.1.js"></script>
   <script src="/js/ui.js"></script>
-  <script>
+	<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
+	<script type="text/javascript">
   $(function() {
+    
     $('#downloads').click(function() {
       new ui.dialog('Download ⬇', $('<ul><li><a href="http://chillininspace.us.s3.amazonaws.com/ChillininSpace3.0.zip">Mac</a></li><li><a href="http://chillininspace.us.s3.amazonaws.com/Chillin3.0Windows.zip">Windows</a></li></ul>'))
               .closable()
@@ -13,8 +15,31 @@
               .show();
       return false;
     });
+    $('#play').click(function() {
+
+
+      new ui.dialog('PLAY', $('<div id="unityPlayer"><div class="missing"><a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!"><img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" /></a></div></div>'))
+      .closable()
+      .modal()
+      .show();
+
+      $('#dialog').css('width','650px').css('margin-left','-325px');
+
+    	function GetUnity() {
+    		if (typeof unityObject != "undefined") {
+    			return unityObject.getObjectById("unityPlayer");
+    		}
+    		return null;
+    	}
+    	if (typeof unityObject != "undefined") {
+    		unityObject.embedUnity("unityPlayer", "http://chillininspace.us.s3.amazonaws.com/ChillinInSpaceWeb.unity3d", 600, 450);
+			
+    	}
+      return false;
+    });
   });
   </script>
+
   <link rel="stylesheet" href="/css/style.css"/>
   <link rel="stylesheet" href="/ui.css"/>
 </head>
