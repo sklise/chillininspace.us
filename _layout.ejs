@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js"></script>
 	<script type="text/javascript">
   $(function() {
-    
+
     $('#downloads').click(function() {
       new ui.dialog('Download ⬇', $('<ul><li><a href="http://chillininspace.us.s3.amazonaws.com/ChillininSpace3.0.zip">Mac</a></li><li><a href="http://chillininspace.us.s3.amazonaws.com/Chillin3.0Windows.zip">Windows</a></li></ul>'))
               .closable()
@@ -33,14 +33,14 @@
     	}
     	if (typeof unityObject != "undefined") {
     		unityObject.embedUnity("unityPlayer", "http://chillininspace.us.s3.amazonaws.com/ChillinInSpaceWeb.unity3d", 600, 450);
-			
+
     	}
       return false;
     });
   });
   </script>
 
-  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/style.css"/>
   <link rel="stylesheet" href="/ui.css"/>
   <script type="text/javascript">
 
@@ -60,7 +60,7 @@
   <div id="wrapper">
     <div id="logo"><a href="/"><img src="http://chillininspace.us.s3.amazonaws.com/chillinlogo.png"></a></div>
     <div>
-      <%= yield %>    
+      <%- yield %>
     </div>
   </div>
   <div style="top:-300%;left:-300%;position:absolute;"><img src="http://chillininspace.us.s3.amazonaws.com/overlay.png"></div>
